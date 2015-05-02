@@ -3,6 +3,7 @@
 A small experiment to compare the performance of diffrent Java PRNG implementations.
 Here are the results on my machine:
 
+```
 Doubles:
 =================================================
 100000 Generated Numbers
@@ -107,3 +108,4 @@ DSI Utils Xorshift1024*: 1887 ms
 Java8 SplitableRandom: 1527 ms
 java.util.Random: 3272 ms
 -------------------------------------------------
+```
