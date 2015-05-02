@@ -53,7 +53,7 @@ public class RandomPerformance {
         System.out.println(System.lineSeparator() + "Integer:");
         System.out.println("=================================================");
         for (int generatedNumbers : NUM_GENERATIONS) {
-            System.out.println(generatedNumbers + " Repeats;");
+            System.out.println(generatedNumbers + " Generated Numbers");
             System.out.println("-------------------------------------------------");
             for (IRandomGenerator generator : generators) {
                 long time = System.currentTimeMillis();
