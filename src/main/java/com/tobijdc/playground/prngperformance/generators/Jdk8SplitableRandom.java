@@ -1,19 +1,18 @@
-package com.tobijdc.playground.xorshiftperformance;
+package com.tobijdc.playground.prngperformance.generators;
 
-import it.unimi.dsi.util.XorShift1024StarRandom;
-import java.util.Random;
+import java.util.SplittableRandom;
 
 /**
  *
  * @author tobijdc
  */
-public class DsiXorShift1024Star implements IRandomGenerator {
+public class Jdk8SplitableRandom implements RandomGenerator {
 
-    private static final String NAME = "DSI Utils Xorshift1024*";
-    private final Random random;
+    private static final String NAME = "Java8 SplitableRandom";
+    private final SplittableRandom random;
 
-    public DsiXorShift1024Star() {
-        random = new XorShift1024StarRandom();
+    public Jdk8SplitableRandom() {
+        random = new SplittableRandom();
     }
 
     @Override

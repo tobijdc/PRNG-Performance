@@ -1,19 +1,19 @@
-package com.tobijdc.playground.xorshiftperformance;
+package com.tobijdc.playground.prngperformance.generators;
 
-import it.unimi.dsi.util.SplitMix64Random;
+import it.unimi.dsi.util.XorShift1024StarRandom;
 import java.util.Random;
 
 /**
  *
  * @author tobijdc
  */
-public class DsiSplitMix64 implements IRandomGenerator {
+public class DsiXorShift1024Star implements RandomGenerator {
 
-    private static final String NAME = "DSI Utils SplitMix64";
+    private static final String NAME = "DSI Utils Xorshift1024*";
     private final Random random;
 
-    public DsiSplitMix64() {
-        random = new SplitMix64Random();
+    public DsiXorShift1024Star() {
+        random = new XorShift1024StarRandom();
     }
 
     @Override

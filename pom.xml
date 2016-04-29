@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tobijdc.playground</groupId>
     <artifactId>XorshiftPerformance</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
     
     <properties>
@@ -14,9 +14,20 @@
     
     <dependencies>
         <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+            <version>1.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <version>1.12</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>it.unimi.dsi</groupId>
             <artifactId>dsiutils</artifactId>
-            <version>2.2.4</version>
+            <version>2.3.2</version>
         </dependency>
     </dependencies>
     
@@ -25,8 +36,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.3</version>
+                <version>3.5.1</version>
                 <configuration>
+                    <optimize>true</optimize>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                     <compilerId>javac-with-errorprone</compilerId>
                     <forceJavacCompilerUse>true</forceJavacCompilerUse>
                 </configuration>
@@ -34,7 +52,14 @@
                     <dependency>
                         <groupId>org.codehaus.plexus</groupId>
                         <artifactId>plexus-compiler-javac-errorprone</artifactId>
-                        <version>2.5</version>
+                        <version>2.7</version>
+                    </dependency>
+                    <!-- override plexus-compiler-javac-errorprone's dependency on
+                    Error Prone with the latest version -->
+                    <dependency>
+                        <groupId>com.google.errorprone</groupId>
+                        <artifactId>error_prone_core</artifactId>
+                        <version>2.0.9</version>
                     </dependency>
                 </dependencies>
             </plugin>

@@ -1,11 +1,11 @@
-package com.tobijdc.playground.xorshiftperformance;
+package com.tobijdc.playground.prngperformance.generators;
 
 /**
  * Interface for Random number generator.
  * <p>
  * @author tobijdc
  */
-public interface IRandomGenerator {
+public interface RandomGenerator {
 
     long generateLong();
 

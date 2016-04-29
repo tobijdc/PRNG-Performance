@@ -1,18 +1,19 @@
-package com.tobijdc.playground.xorshiftperformance;
+package com.tobijdc.playground.prngperformance.generators;
 
-import java.util.SplittableRandom;
+import it.unimi.dsi.util.SplitMix64Random;
+import java.util.Random;
 
 /**
  *
  * @author tobijdc
  */
-public class Java8SplitableRandom implements IRandomGenerator {
+public class DsiSplitMix64 implements RandomGenerator {
 
-    private static final String NAME = "Java8 SplitableRandom";
-    private final SplittableRandom random;
+    private static final String NAME = "DSI Utils SplitMix64";
+    private final Random random;
 
-    public Java8SplitableRandom() {
-        random = new SplittableRandom();
+    public DsiSplitMix64() {
+        random = new SplitMix64Random();
     }
 
     @Override
