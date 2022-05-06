@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class JdkUtilRandom implements RandomGenerator {
 
-    private static final String NAME = "Java8 SplitableRandom";
+    private static final String NAME = "Java Util Random";
     private final Random random;
 
     public JdkUtilRandom() {

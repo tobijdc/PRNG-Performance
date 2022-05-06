@@ -1,4 +1,4 @@
-package benchmark;
+package com.tobijdc.playground.prngperformance.benchmark;
 
 import org.openjdk.jmh.annotations.*;
 

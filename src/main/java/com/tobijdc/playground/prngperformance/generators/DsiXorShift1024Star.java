@@ -1,6 +1,6 @@
 package com.tobijdc.playground.prngperformance.generators;
 
-import it.unimi.dsi.util.XorShift1024StarRandom;
+import it.unimi.dsi.util.XorShift1024StarPhiRandom;
 import java.util.Random;
 
 /**
@@ -9,11 +9,11 @@ import java.util.Random;
  */
 public class DsiXorShift1024Star implements RandomGenerator {
 
-    private static final String NAME = "DSI Utils Xorshift1024*";
+    private static final String NAME = "DSI Utils Xorshift1024*Phi";
     private final Random random;
 
     public DsiXorShift1024Star() {
-        random = new XorShift1024StarRandom();
+        random = new XorShift1024StarPhiRandom();
     }
 
     @Override

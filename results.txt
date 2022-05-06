@@ -1,0 +1,180 @@
+# Run complete. Total time: 02:55:37
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                                                   Mode      Cnt       Score    Error  Units
+RandomBenchmark.testRandom                                                                  avgt       25     771,941 ± 14,920  ns/op
+RandomBenchmark.testSplittableRandom                                                        avgt       25       1,772 ±  0,052  ns/op
+RandomBenchmark.testThreadLocalRandom                                                       avgt       25       4,184 ±  0,048  ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble                                    sample  8222254      29,690 ±  0,099  ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble:jdk8SplitableRandomDouble·p0.00    sample                  ? 0           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble:jdk8SplitableRandomDouble·p0.50    sample                  ? 0           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble:jdk8SplitableRandomDouble·p0.90    sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble:jdk8SplitableRandomDouble·p0.95    sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble:jdk8SplitableRandomDouble·p0.99    sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble:jdk8SplitableRandomDouble·p0.999   sample              101,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble:jdk8SplitableRandomDouble·p0.9999  sample             1700,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomDouble:jdk8SplitableRandomDouble·p1.00    sample            53888,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt                                       sample  8158648      29,828 ±  0,116  ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt:jdk8SplitableRandomInt·p0.00          sample                  ? 0           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt:jdk8SplitableRandomInt·p0.50          sample                  ? 0           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt:jdk8SplitableRandomInt·p0.90          sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt:jdk8SplitableRandomInt·p0.95          sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt:jdk8SplitableRandomInt·p0.99          sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt:jdk8SplitableRandomInt·p0.999         sample              101,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt:jdk8SplitableRandomInt·p0.9999        sample             2200,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomInt:jdk8SplitableRandomInt·p1.00          sample            61440,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong                                      sample  9052540      29,250 ±  0,091  ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong:jdk8SplitableRandomLong·p0.00        sample                  ? 0           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong:jdk8SplitableRandomLong·p0.50        sample                  ? 0           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong:jdk8SplitableRandomLong·p0.90        sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong:jdk8SplitableRandomLong·p0.95        sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong:jdk8SplitableRandomLong·p0.99        sample              100,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong:jdk8SplitableRandomLong·p0.999       sample              101,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong:jdk8SplitableRandomLong·p0.9999      sample             1300,000           ns/op
+BenchmarkJdk8SplitableRandom.jdk8SplitableRandomLong:jdk8SplitableRandomLong·p1.00        sample            57280,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble                                                sample  7255299      35,129 ±  0,103  ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble:jdkUtilRandomDouble·p0.00                      sample                  ? 0           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble:jdkUtilRandomDouble·p0.50                      sample                  ? 0           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble:jdkUtilRandomDouble·p0.90                      sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble:jdkUtilRandomDouble·p0.95                      sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble:jdkUtilRandomDouble·p0.99                      sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble:jdkUtilRandomDouble·p0.999                     sample              101,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble:jdkUtilRandomDouble·p0.9999                    sample             1600,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomDouble:jdkUtilRandomDouble·p1.00                      sample            48960,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt                                                   sample  6793191      33,706 ±  0,121  ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt:jdkUtilRandomInt·p0.00                            sample                  ? 0           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt:jdkUtilRandomInt·p0.50                            sample                  ? 0           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt:jdkUtilRandomInt·p0.90                            sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt:jdkUtilRandomInt·p0.95                            sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt:jdkUtilRandomInt·p0.99                            sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt:jdkUtilRandomInt·p0.999                           sample              101,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt:jdkUtilRandomInt·p0.9999                          sample             1798,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomInt:jdkUtilRandomInt·p1.00                            sample            52160,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong                                                  sample  7850157      34,449 ±  0,100  ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong:jdkUtilRandomLong·p0.00                          sample                  ? 0           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong:jdkUtilRandomLong·p0.50                          sample                  ? 0           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong:jdkUtilRandomLong·p0.90                          sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong:jdkUtilRandomLong·p0.95                          sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong:jdkUtilRandomLong·p0.99                          sample              100,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong:jdkUtilRandomLong·p0.999                         sample              101,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong:jdkUtilRandomLong·p0.9999                        sample             1400,000           ns/op
+BenchmarkJdkUtilRandom.jdkUtilRandomLong:jdkUtilRandomLong·p1.00                          sample            37056,000           ns/op
+BenchmarkSplitMix64.splitMix64Double                                                      sample  8325463      28,796 ±  0,075  ns/op
+BenchmarkSplitMix64.splitMix64Double:splitMix64Double·p0.00                               sample                  ? 0           ns/op
+BenchmarkSplitMix64.splitMix64Double:splitMix64Double·p0.50                               sample                  ? 0           ns/op
+BenchmarkSplitMix64.splitMix64Double:splitMix64Double·p0.90                               sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Double:splitMix64Double·p0.95                               sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Double:splitMix64Double·p0.99                               sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Double:splitMix64Double·p0.999                              sample              101,000           ns/op
+BenchmarkSplitMix64.splitMix64Double:splitMix64Double·p0.9999                             sample              400,000           ns/op
+BenchmarkSplitMix64.splitMix64Double:splitMix64Double·p1.00                               sample            35136,000           ns/op
+BenchmarkSplitMix64.splitMix64Int                                                         sample  8852287      29,133 ±  0,077  ns/op
+BenchmarkSplitMix64.splitMix64Int:splitMix64Int·p0.00                                     sample                  ? 0           ns/op
+BenchmarkSplitMix64.splitMix64Int:splitMix64Int·p0.50                                     sample                  ? 0           ns/op
+BenchmarkSplitMix64.splitMix64Int:splitMix64Int·p0.90                                     sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Int:splitMix64Int·p0.95                                     sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Int:splitMix64Int·p0.99                                     sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Int:splitMix64Int·p0.999                                    sample              101,000           ns/op
+BenchmarkSplitMix64.splitMix64Int:splitMix64Int·p0.9999                                   sample              600,000           ns/op
+BenchmarkSplitMix64.splitMix64Int:splitMix64Int·p1.00                                     sample            49344,000           ns/op
+BenchmarkSplitMix64.splitMix64Long                                                        sample  8942673      29,245 ±  0,067  ns/op
+BenchmarkSplitMix64.splitMix64Long:splitMix64Long·p0.00                                   sample                  ? 0           ns/op
+BenchmarkSplitMix64.splitMix64Long:splitMix64Long·p0.50                                   sample                  ? 0           ns/op
+BenchmarkSplitMix64.splitMix64Long:splitMix64Long·p0.90                                   sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Long:splitMix64Long·p0.95                                   sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Long:splitMix64Long·p0.99                                   sample              100,000           ns/op
+BenchmarkSplitMix64.splitMix64Long:splitMix64Long·p0.999                                  sample              101,000           ns/op
+BenchmarkSplitMix64.splitMix64Long:splitMix64Long·p0.9999                                 sample              400,000           ns/op
+BenchmarkSplitMix64.splitMix64Long:splitMix64Long·p1.00                                   sample            25472,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble                                          sample  6270452      29,560 ±  0,100  ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble:xorShift1024StarDouble·p0.00             sample                  ? 0           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble:xorShift1024StarDouble·p0.50             sample                  ? 0           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble:xorShift1024StarDouble·p0.90             sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble:xorShift1024StarDouble·p0.95             sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble:xorShift1024StarDouble·p0.99             sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble:xorShift1024StarDouble·p0.999            sample              101,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble:xorShift1024StarDouble·p0.9999           sample             1500,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarDouble:xorShift1024StarDouble·p1.00             sample            31392,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt                                             sample  6938803      30,095 ±  0,108  ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt:xorShift1024StarInt·p0.00                   sample                  ? 0           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt:xorShift1024StarInt·p0.50                   sample                  ? 0           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt:xorShift1024StarInt·p0.90                   sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt:xorShift1024StarInt·p0.95                   sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt:xorShift1024StarInt·p0.99                   sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt:xorShift1024StarInt·p0.999                  sample              101,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt:xorShift1024StarInt·p0.9999                 sample             1400,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarInt:xorShift1024StarInt·p1.00                   sample            69888,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong                                            sample  6894581      29,382 ±  0,102  ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong:xorShift1024StarLong·p0.00                 sample                  ? 0           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong:xorShift1024StarLong·p0.50                 sample                  ? 0           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong:xorShift1024StarLong·p0.90                 sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong:xorShift1024StarLong·p0.95                 sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong:xorShift1024StarLong·p0.99                 sample              100,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong:xorShift1024StarLong·p0.999                sample              101,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong:xorShift1024StarLong·p0.9999               sample             1098,000           ns/op
+BenchmarkXorShift1024Star.xorShift1024StarLong:xorShift1024StarLong·p1.00                 sample            97664,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble                                            sample  8911743      29,951 ±  0,068  ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble:xorShift128PlusDouble·p0.00                sample                  ? 0           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble:xorShift128PlusDouble·p0.50                sample                  ? 0           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble:xorShift128PlusDouble·p0.90                sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble:xorShift128PlusDouble·p0.95                sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble:xorShift128PlusDouble·p0.99                sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble:xorShift128PlusDouble·p0.999               sample              101,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble:xorShift128PlusDouble·p0.9999              sample              400,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusDouble:xorShift128PlusDouble·p1.00                sample            31968,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt                                               sample  8148799      29,943 ±  0,086  ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt:xorShift128PlusInt·p0.00                      sample                  ? 0           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt:xorShift128PlusInt·p0.50                      sample                  ? 0           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt:xorShift128PlusInt·p0.90                      sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt:xorShift128PlusInt·p0.95                      sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt:xorShift128PlusInt·p0.99                      sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt:xorShift128PlusInt·p0.999                     sample              101,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt:xorShift128PlusInt·p0.9999                    sample              612,880           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusInt:xorShift128PlusInt·p1.00                      sample            51200,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong                                              sample  9167690      30,097 ±  0,107  ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong:xorShift128PlusLong·p0.00                    sample                  ? 0           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong:xorShift128PlusLong·p0.50                    sample                  ? 0           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong:xorShift128PlusLong·p0.90                    sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong:xorShift128PlusLong·p0.95                    sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong:xorShift128PlusLong·p0.99                    sample              100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong:xorShift128PlusLong·p0.999                   sample              101,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong:xorShift128PlusLong·p0.9999                  sample             1100,000           ns/op
+BenchmarkXorShift128Plus.xorShift128PlusLong:xorShift128PlusLong·p1.00                    sample           183040,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble                                          sample  8424508      29,546 ±  0,070  ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble:xoroshiro128PlusDouble·p0.00             sample                  ? 0           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble:xoroshiro128PlusDouble·p0.50             sample                  ? 0           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble:xoroshiro128PlusDouble·p0.90             sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble:xoroshiro128PlusDouble·p0.95             sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble:xoroshiro128PlusDouble·p0.99             sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble:xoroshiro128PlusDouble·p0.999            sample              101,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble:xoroshiro128PlusDouble·p0.9999           sample              600,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusDouble:xoroshiro128PlusDouble·p1.00             sample            23488,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt                                             sample  8946210      29,880 ±  0,086  ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt:xoroshiro128PlusInt·p0.00                   sample                  ? 0           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt:xoroshiro128PlusInt·p0.50                   sample                  ? 0           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt:xoroshiro128PlusInt·p0.90                   sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt:xoroshiro128PlusInt·p0.95                   sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt:xoroshiro128PlusInt·p0.99                   sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt:xoroshiro128PlusInt·p0.999                  sample              101,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt:xoroshiro128PlusInt·p0.9999                 sample              700,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusInt:xoroshiro128PlusInt·p1.00                   sample            80768,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong                                            sample  5165297      29,087 ±  0,120  ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong:xoroshiro128PlusLong·p0.00                 sample                  ? 0           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong:xoroshiro128PlusLong·p0.50                 sample                  ? 0           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong:xoroshiro128PlusLong·p0.90                 sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong:xoroshiro128PlusLong·p0.95                 sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong:xoroshiro128PlusLong·p0.99                 sample              100,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong:xoroshiro128PlusLong·p0.999                sample              101,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong:xoroshiro128PlusLong·p0.9999               sample             1898,000           ns/op
+BenchmarkXoroshiro128Plus.xoroshiro128PlusLong:xoroshiro128PlusLong·p1.00                 sample            38976,000           ns/op

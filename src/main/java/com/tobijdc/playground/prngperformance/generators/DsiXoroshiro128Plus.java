@@ -1,6 +1,6 @@
 package com.tobijdc.playground.prngperformance.generators;
 
-import it.unimi.dsi.util.XorRShR128PlusRandomGenerator;
+import it.unimi.dsi.util.XoRoShiRo128PlusRandomGenerator;
 
 /**
  *
@@ -8,11 +8,11 @@ import it.unimi.dsi.util.XorRShR128PlusRandomGenerator;
  */
 public class DsiXoroshiro128Plus implements RandomGenerator {
 
-    private static final String NAME = "DSI Utils XorShift128+";
-    private final XorRShR128PlusRandomGenerator random;
+    private static final String NAME = "DSI Utils XoRoShiro128+";
+    private final XoRoShiRo128PlusRandomGenerator random;
 
     public DsiXoroshiro128Plus() {
-        random = new XorRShR128PlusRandomGenerator();
+        random = new XoRoShiRo128PlusRandomGenerator();
     }
 
     @Override

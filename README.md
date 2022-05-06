@@ -3,11 +3,66 @@
 A simple independant comparison of several **P**seudo **R**andom **N**umber **G**enerators in Java.
 The newest Version of this Test is based on [JMH](http://openjdk.java.net/projects/code-tools/jmh/), a library for creating benchmarks on the JVM.
 
+## How to Run
+
+### Windows
+
+`.\mvnw.cmd clean compile exec:java`
+
+### Linux
+
+`./mvnw clean compile exec:java`
+
 ## Algorithms
 
-**TODO**: Describe and Link algortihms
+* [java.util.Random](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Random.html)
+* [SplittableRandom](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/SplittableRandom.html)
+* Other Alorithms using [dsiutils](https://dsiutils.di.unimi.it/)
 
-## Results
+It seems some algorithms are not implemented in [JDK 17 java.util.random package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html).
+Contributions welcome :)
+
+## Results 2021
+
+These are the results from my PC running Ryzen 5 5600G and OpenJDK 64-Bit Server VM Temurin-17.0.2+8.
+Raw results in [results.txt](results.txt).
+
+Biggest difference to Java 8 and Java 17, is that the difference in runtime has significantly shrunk.
+
+### Integer
+
+| Algorithm           | Mode     | Cnt     | Runtime     | Error     | Units  |
+|---------------------|----------|---------|-------------|-----------|--------|
+| Jdk8SplitableRandom | sample   | 8158648 |     29,828  | ±  0,116  |  ns/op |
+| JdkUtilRandom       | sample   | 6793191 |     33,706  | ±  0,121  |  ns/op |
+| SplitMix64          | sample   | 8852287 |     29,133  | ±  0,077  |  ns/op |
+| XorShift1024Star    | sample   | 6938803 |     30,095  | ±  0,108  |  ns/op |
+| XorShift128Plus     | sample   | 8148799 |     29,943  | ±  0,086  |  ns/op |
+| Xoroshiro128Plus    | sample   | 8946210 |     29,880  | ±  0,086  |  ns/op |
+
+### Longs
+
+| Algorithm           | Mode     | Cnt     | Runtime     | Error     | Units  |
+|---------------------|----------|---------|-------------|-----------|--------|
+| Jdk8SplitableRandom | sample   | 9052540 |     29,250  | ±  0,091  |  ns/op |
+| JdkUtilRandom       | sample   | 7850157 |     34,449  | ±  0,100  |  ns/op |
+| SplitMix64          | sample   | 8942673 |     29,245  | ±  0,067  |  ns/op |
+| XorShift1024Star    | sample   | 6894581 |     29,382  | ±  0,102  |  ns/op |
+| XorShift128Plus     | sample   | 9167690 |     30,097  | ±  0,107  |  ns/op |
+| Xoroshiro128Plus    | sample   | 5165297 |     29,087  | ±  0,120  |  ns/op |
+
+### Doubles
+
+| Algorithm           | Mode     | Cnt     | Runtime     | Error     | Units  |
+|---------------------|----------|---------|-------------|-----------|--------|
+| Jdk8SplitableRandom | sample   | 8222254 |     29,690  | ±  0,099  |  ns/op |
+| JdkUtilRandom       | sample   | 7255299 |     35,129  | ±  0,103  |  ns/op |
+| SplitMix64          | sample   | 8325463 |     28,796  | ±  0,075  |  ns/op |
+| XorShift1024Star    | sample   | 6270452 |     29,560  | ±  0,100  |  ns/op |
+| XorShift128Plus     | sample   | 8911743 |     29,951  | ±  0,068  |  ns/op |
+| Xoroshiro128Plus    | sample   | 8424508 |     29,546  | ±  0,070  |  ns/op |
+
+## Results 2016
 
 These are the results from my Laptop running Corei7 3630QM and Java 1.8 Update 20 64Bit.
 
@@ -45,18 +100,8 @@ These are the results from my Laptop running Corei7 3630QM and Java 1.8 Update 2
 | Xoroshiro128+         |	sample |	2802308 |	20,664 |	0,210 |	ns/op |	41%
 
 
-## How to Run
-
-### Netbeans
-
-Either open the Project in Netbeans and click Run.
-
-### Maven
-
-**TODO:** Explain how to run with mvn from CLI.
-
 ## Contribution and License
 
 This code is licensed under MIT.
 
-Contributions are welcome, as I am not very experienced with Benchmarking using JMH.
+Contributions are welcome.
