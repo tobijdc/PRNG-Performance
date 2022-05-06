@@ -22,7 +22,7 @@ The newest Version of this Test is based on [JMH](http://openjdk.java.net/projec
 It seems some algorithms are not implemented in [JDK 17 java.util.random package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html).
 Contributions welcome :)
 
-## Results 2021
+## Results 2022
 
 These are the results from my PC running Ryzen 5 5600G and OpenJDK 64-Bit Server VM Temurin-17.0.2+8.
 Raw results in [results.txt](results.txt).
