@@ -1,6 +1,6 @@
 # About PRNG-Performance
 
-A simple independant comparison of several **P**seudo **R**andom **N**umber **G**enerators in Java.
+A simple independent comparison of several **P**seudo **R**andom **N**umber **G**enerators in Java.
 The newest Version of this Test is based on [JMH](http://openjdk.java.net/projects/code-tools/jmh/), a library for creating benchmarks on the JVM.
 
 ## How to Run
@@ -18,9 +18,28 @@ The newest Version of this Test is based on [JMH](http://openjdk.java.net/projec
 * [java.util.Random](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Random.html)
 * [SplittableRandom](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/SplittableRandom.html)
 * Other Alorithms using [dsiutils](https://dsiutils.di.unimi.it/)
+* In the 2024 results I now included some of the [JDK 17 java.util.random package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html) algorithms.
 
-It seems some algorithms are not implemented in [JDK 17 java.util.random package](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/random/package-summary.html).
-Contributions welcome :)
+## Results 2024
+
+These are the results from my PC running Ryzen 5 5600G and OpenJDK 64-Bit Server VM Temurin-17.0.12+7.
+Raw results in [results2.txt](results2.txt).
+
+Original intention was to run on Java 21, oops :).
+
+### Integer
+
+| Algorithm           | Mode     | Cnt     | Runtime     | Error     | Units  |
+|---------------------|----------|---------|-------------|-----------|--------|
+| Jdk8SplitableRandom | sample   | 9613821 |     28,917  | ±  0,070  |  ns/op |
+| JdkUtilRandom       | sample   | 8903706 |     33,501  | ±  0,168  |  ns/op |
+| JdkXoroshiro128++   | sample   | 8852287 |     29,989  | ±  0,071  |  ns/op |
+| JdkXoshiro256++     | sample   | 7260221 |     30,805  | ±  0,475  |  ns/op |
+| SplitMix64          | sample   | 8921026 |     28,675  | ±  0,072  |  ns/op |
+| XorShift1024Star    | sample   | 6944177 |     29,480  | ±  0,094  |  ns/op |
+| XorShift128Plus     | sample   | 8962997 |     30,083  | ±  0,077  |  ns/op |
+| Xoroshiro128Plus    | sample   | 8981128 |     29,826  | ±  0,075  |  ns/op |
+
 
 ## Results 2022
 
